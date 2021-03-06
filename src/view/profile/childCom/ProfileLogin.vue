@@ -1,13 +1,13 @@
 <template>
   <div class="profile-login">
     <div class="avatar-img">
-      <img src="~@/assets/img/profile/avatar.svg" alt="" />
+      <img :src="addressIcon()" alt="" />
     </div>
     <div class="login-center">
-      <div>注册/登录</div>
+      <div>{{ $store.state.user.username }}</div>
       <div class="dasdasdas">
         <img src="~@/assets/img/profile/phone.svg" alt="" />
-        <span>暂无绑定手机</span>
+        <span>{{ $store.state.user.phone }}</span>
       </div>
     </div>
     <div class="arrow">
@@ -18,6 +18,12 @@
 <script>
 export default {
   name: "ProfileLogin",
+  methods: {
+    addressIcon() {
+      // 在变量中引入图片地址需要使用到require
+      return require("@/assets/img/profile/" + this.$store.state.user.img);
+    },
+  },
 };
 </script>
 <style scoped>
@@ -34,6 +40,7 @@ export default {
 }
 .avatar-img img {
   width: 100%;
+  height: 100%;
 }
 .login-center {
   flex: 3;
