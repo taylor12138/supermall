@@ -20,6 +20,7 @@
     </form>
     <div class="sub_butn" @click="onRegister()">注册</div>
     <div class="sub_butn2" @click="onLogin()">登录</div>
+    <div class="tip">Tip：若是登录状态只需要输入正确的手机号和密码即可</div>
   </div>
 </template>
 <script>
@@ -147,5 +148,9 @@ export default {
 .sub_butn2 {
   color: #fff;
   background-color: rgb(235, 51, 51);
+}
+.tip {
+  font-size: 0.75rem;
+  color: #fff;
 }
 </style>
