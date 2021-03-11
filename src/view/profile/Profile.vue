@@ -9,11 +9,11 @@
     <!-- 个人登录部分 -->
     <profile-login @click.once.native="enterLogin" />
     <!-- 账户余额 -->
-    <profile-count />
+    <profile-count @click.native="tipNoOpen" />
     <!-- 账户功能部分 -->
-    <profile-info :profileMessage="profileOrder" />
+    <profile-info :profileMessage="profileOrder" @click.native="tipNoOpen" />
     <!-- 购物车功能 -->
-    <profile-info :profileMessage="profileService" />
+    <profile-info :profileMessage="profileService" @click.native="tipNoOpen" />
     <!-- 注册用户页面 -->
     <profile-register
       class="profile-register"
@@ -63,6 +63,10 @@ export default {
     },
     showRegister(isLogin) {
       this.isLogin = isLogin;
+    },
+    // 未开放功能
+    tipNoOpen() {
+      this.$toast.showMessage();
     },
   },
 };

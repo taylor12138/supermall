@@ -7,7 +7,7 @@
     </div>
     <div class="detail-buy-right">
       <div @click="addToCart">购物车</div>
-      <div>购买</div>
+      <div @click="addBuy">购买</div>
     </div>
   </div>
 </template>
@@ -15,8 +15,13 @@
 export default {
   name: "DetailBuy",
   methods: {
+    // 添加购物车事件
     addToCart() {
       this.$emit("addToCart");
+    },
+    // 购买事件
+    addBuy() {
+      this.$toast.showMessage();
     },
   },
 };

@@ -75,6 +75,10 @@ export default {
         this.isPhone = false;
         this.isPwd = false;
         this.$toast.showMessage("手机号码或密码错误", 3000);
+      } else if (err_code === 3) {
+        this.isPhone = false;
+        this.isPwd = false;
+        this.$toast.showMessage("手机号码无效", 3000);
       } else if (err_code === 500) {
         // 弹窗toast提示事件
         this.$toast.showMessage("服务器忙，请稍后重试！", 3000);
@@ -92,6 +96,9 @@ export default {
       } else if (err_code === 2) {
         this.isName = false;
         this.$toast.showMessage("昵称已使用", 3000);
+      } else if (err_code === 3) {
+        this.isPhone = false;
+        this.$toast.showMessage("手机号码无效", 3000);
       } else if (err_code === 500) {
         // 弹窗toast提示事件
         this.$toast.showMessage("服务器忙，请稍后重试！", 3000);

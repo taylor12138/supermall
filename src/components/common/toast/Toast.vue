@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     //   duration时间间隔默认2s
-    showMessage(message, duration = 2000) {
+    showMessage(message = "该功能暂未开放，敬请期待", duration = 3000) {
       this.message = message;
       this.isShow = true;
       setTimeout(() => {

@@ -11,32 +11,32 @@ Vue.use(VueRouter);
 
 // 2.创建路由对象+导出
 const routes = [
-    {
-        path: '',
-        redirect: '/home'
-    },
-    {
-        path: '/home',
-        component: Home
-    },
-    {
-        path: '/category',
-        component: Category
-    },
-    {
-        path: '/cart',
-        component: Cart
-    },
-    {
-        path: '/profile',
-        component: Profile
-    },
-    {
-        path: '/detail/:iid',
-        component: Detail
-    }
+  {
+    path: '',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
+    component: Home
+  },
+  {
+    path: '/category',
+    component: Category
+  },
+  {
+    path: '/cart',
+    component: Cart
+  },
+  {
+    path: '/profile',
+    component: Profile
+  },
+  {
+    path: '/detail/:iid',
+    component: Detail
+  }
 ];
 export default new VueRouter({
-    routes,
-    mode: 'history'
+  routes,
+  mode: 'hash'
 });
