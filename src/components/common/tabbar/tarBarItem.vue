@@ -42,7 +42,6 @@ export default {
 <style scoped>
 .tab-bar-item {
   flex: 1;
-  height: 2.45rem;
   text-align: center;
   font-size: 0.7rem;
 }

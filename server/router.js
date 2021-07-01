@@ -11,7 +11,7 @@ router.post('/profile/register', function (req, res, next) {
   var body = req.body;
   console.log(body);
   // 使用正则表达式控制用户不要输入错误的电话号码
-  let rg = /^[0-9]{11}$/;
+  let rg = /^1[0-9]{10}$/;
   if (!rg.test(body.phone)) return res.status(200).json({
     err_code: 3,
     message: 'wrong phone'
